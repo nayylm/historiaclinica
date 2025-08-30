@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia Clínica Detallada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Historia Clínica Detallada</h1>
+  <form id="historiaForm">
+    <div class="section">
+      <h2>1. Datos Personales</h2>
+      <label>Nombre completo:</label>
+      <input type="text" id="nombre" required>
+      <label>Edad:</label>
+      <input type="number" id="edad" required>
+      <label>Sexo:</label>
+      <select id="sexo" required>
+        <option value="">Seleccionar</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Otro">Otro</option>
+      </select>
+      <label>Fecha de nacimiento:</label>
+      <input type="date" id="fechaNacimiento" required>
+    </div>
+
+    <div class="section">
+      <h2>2. Motivo de Consulta</h2>
+      <textarea id="motivo" rows="3" required></textarea>
+    </div>
+
+    <div class="section">
+      <h2>3. Antecedentes</h2>
+      <label>Personales:</label>
+      <textarea id="antecedentesPersonales" rows="3"></textarea>
+      <label>Familiares:</label>
+      <textarea id="antecedentesFamiliares" rows="3"></textarea>
+      <label>Hábitos:</label>
+      <textarea id="habitos" rows="3"></textarea>
+    </div>
+
+    <div class="section">
+      <h2>4. Exploración Física</h2>
+      <label>Signos vitales:</label>
+      <textarea id="signosVitales" rows="3"></textarea>
+      <label>Examen físico general:</label>
+      <textarea id="examenFisico" rows="5"></textarea>
+    </div>
+
+    <div class="section">
+      <h2>5. Estudios Realizados</h2>
+      <textarea id="estudios" rows="3"></textarea>
+    </div>
+
+    <div class="section">
+      <h2>6. Diagnóstico</h2>
+      <textarea id="diagnostico" rows="3"></textarea>
+    </div>
+
+    <div class="section">
+      <h2>7. Plan y Tratamiento</h2>
+      <textarea id="plan" rows="5"></textarea>
+    </div>
+
+    <button type="submit">Guardar Historia Clínica</button>
+  </form>
